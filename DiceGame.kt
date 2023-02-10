@@ -1,3 +1,7 @@
+// Robert Comtois
+// A00044787
+// Dice rolling game using the Die.kt class
+
 fun main() {
     println("Creating a default d6...")
     val dice0 = Die()
@@ -33,6 +37,7 @@ fun main() {
 
 }
 
+// Yahtzee function which will create 5 new dice and roll them until they all match, using a fancy while loop :)
 fun Yahtzee() {
     println("Creating 5 d6...")
     val dice: MutableList<Die> = mutableListOf()
@@ -44,8 +49,6 @@ fun Yahtzee() {
         for (x in dice){
             x.Roll()
         }
-
-        //for (x in dice) { println("${x.GetSideUp()}") }
 
         if (dice[0].GetSideUp() == dice[1].GetSideUp() && dice[0].GetSideUp() == dice[2].GetSideUp() && dice[0].GetSideUp() == dice[3].GetSideUp() && dice[0].GetSideUp() == dice[4].GetSideUp())
         {

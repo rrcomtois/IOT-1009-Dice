@@ -11,11 +11,12 @@ class Die(
     init {
         Roll()
     }
-    constructor(sides: Int): this("D" + sides, sides){}
-    constructor(): this("D6", 6)
+    constructor(sides: Int): this("D" + sides, sides) {}
+    constructor(): this("D6", 6) {}
 
     fun Roll() {this.sideUp = Random.nextInt(1, this.sides)}
     fun GetName(): String = this.name
     fun GetSides(): Int = this.sides
     fun GetSideUp(): Int = this.sideUp
+    fun SetSideUp(newSide: Int) {this.sideUp = newSide}
 }
